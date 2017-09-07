@@ -1,9 +1,8 @@
-
 package com.java8.c5.innerclassenum;
 
 public abstract class Transport {
-    
-    private String brand;
+
+	private String brand;
     private String model;
     private int year;
     private PowerState powerState;

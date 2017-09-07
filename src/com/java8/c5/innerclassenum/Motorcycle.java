@@ -1,8 +1,7 @@
-
 package com.java8.c5.innerclassenum;
 
-public class Motorcycle extends Transport {
-    private String typeOfHandlebar;
+public class Motorcycle extends Transport{
+	private String typeOfHandlebar;
 
     public Motorcycle(String brand, String model, int year, String typeOfHandlebar) {
         super(brand, model, year);

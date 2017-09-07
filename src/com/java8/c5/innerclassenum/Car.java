@@ -1,8 +1,7 @@
-
 package com.java8.c5.innerclassenum;
 
 public class Car extends Transport {
-    private String transmision;
+	private String transmision;
     private CarHelper carHelper = new CarHelper();
 
     public Car(String brand, String model, int year, String transmision) {
@@ -29,5 +28,4 @@ public class Car extends Transport {
             return distance / time;
         }
     }
-    
 }
