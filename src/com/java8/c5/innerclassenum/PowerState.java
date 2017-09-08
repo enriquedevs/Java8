@@ -1,6 +1,7 @@
 package com.java8.c5.innerclassenum;
 
 public enum PowerState {
+	
 	OFF("The power is off", 0),
     ON("The power is on", 1),
     DISABLED("Not working", -1);
@@ -21,4 +22,5 @@ public enum PowerState {
     public int getStateNumber() {
         return stateNumber;
     }
+    
 }

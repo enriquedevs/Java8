@@ -1,6 +1,7 @@
 package com.java8.c5.innerclassenum;
 
 public class Car extends Transport {
+	
 	private String transmision;
     private CarHelper carHelper = new CarHelper();
 
@@ -28,4 +29,5 @@ public class Car extends Transport {
             return distance / time;
         }
     }
+    
 }

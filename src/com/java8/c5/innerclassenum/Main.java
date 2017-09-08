@@ -54,4 +54,5 @@ public class Main {
             default: System.out.println("Invalid value");
         }
     }
+	
 }
