@@ -3,7 +3,7 @@ package com.java8.c5.innerclassenum;
 public class Main {
 	
 	public static void main(String[] args) {
-        Car audi = new Car("Audi", "R8", 2017, "manual");
+        Car audi = new Car("Audii", "R8", 2017, "manual");
         System.out.println("Audi velocity: " + audi.calculateVelocity(200, 2) + " km/h");
         
         Motorcycle harvey = new Motorcycle("Harvey", "Street-750", 2015, "curved");
