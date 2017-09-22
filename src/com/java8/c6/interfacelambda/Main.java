@@ -3,7 +3,7 @@ package com.java8.c6.interfacelambda;
 public class Main {
 	
 	public static void main(String[] args) {
-		Car lamborghini = new Car("Lamborghini", "Gallardo", 2015, "manual");
+		Transport lamborghini = new Car("Lamborghini", "Gallardo", 2015, "manual");
 		lamborghini.printDescription();
 		
 		// Instantiating a Transport using a Lambda Expression
