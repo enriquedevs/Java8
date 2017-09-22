@@ -26,8 +26,9 @@ public class Main {
 		practiceWithSets();
 		practiceWithMaps();
 		practiceWithMultiMaps();
-		practiceWithComparator();
 		practiceWithComparable();
+		practiceWithComparator();
+		practiceWithComparatorJava8();
 	}
 	
 	private static void practiceWithLists(){
@@ -184,6 +185,42 @@ public class Main {
 		System.out.println();
 	}
 	
+	private static void practiceWithComparable(){
+		System.out.println("*******COMPARABLE SECTION*******");
+		Set<DogComparableByBreed> dogSet1 = new TreeSet<>();
+
+        dogSet1.add(new DogComparableByBreed("German Shepherd", "Laika", 2));
+        dogSet1.add(new DogComparableByBreed("Akita", "Hachi", 10));
+        dogSet1.add(new DogComparableByBreed("German Shepherd", "Togoe", 6));
+
+        for (DogComparableByBreed dog : dogSet1) {
+            System.out.println(dog);
+        }
+        System.out.println();
+        
+		Set<DogComparableByName> dogSet2 = new TreeSet<>();
+
+        dogSet2.add(new DogComparableByName("German Shepherd", "Laika", 2));
+        dogSet2.add(new DogComparableByName("Akita", "Hachi", 10));
+        dogSet2.add(new DogComparableByName("German Shepherd", "Togoe", 6));
+
+        for (DogComparableByName dog : dogSet2) {
+            System.out.println(dog);
+        }
+        System.out.println();
+
+        Set<DogComparableByAge> dogSet3 = new TreeSet<>();
+
+        dogSet3.add(new DogComparableByAge("German Shepherd", "Laika", 2));
+        dogSet3.add(new DogComparableByAge("Akita", "Hachi", 10));
+        dogSet3.add(new DogComparableByAge("German Shepherd", "Togoe", 6));
+
+        for (DogComparableByAge dog : dogSet3) {
+            System.out.println(dog);
+        }
+		System.out.println();
+	}
+	
 	private static void practiceWithComparator(){
 		System.out.println("*******COMPARATOR SECTION*******");
 		List<Dog> dogList = new ArrayList<>(3);
@@ -216,37 +253,29 @@ public class Main {
 		System.out.println();
 	}
 	
-	private static void practiceWithComparable(){
-		System.out.println("*******COMPARABLE SECTION*******");
-		Set<DogComparableByBreed> dogSet1 = new TreeSet<>();
+	private static void practiceWithComparatorJava8(){
+		System.out.println("*******COMPARATOR JAVA 8 SECTION*******");
+		List<Dog> dogList = new ArrayList<>(3); 
+        dogList.add(new Dog("German Shepherd", "Laika", 2));
+        dogList.add(new Dog("Akita", "Hachi", 10));
+        dogList.add(new Dog("German Shepherd", "Togoe", 6));
 
-        dogSet1.add(new DogComparableByBreed("German Shepherd", "Laika", 2));
-        dogSet1.add(new DogComparableByBreed("Akita", "Hachi", 10));
-        dogSet1.add(new DogComparableByBreed("German Shepherd", "Togoe", 6));
-
-        for (DogComparableByBreed dog : dogSet1) {
+        dogList.sort( (d1, d2) -> d1.getBreed().compareTo(d2.getBreed()) ); // list.sort(Comparator)
+        for (Dog dog : dogList) {
             System.out.println(dog);
         }
+
         System.out.println();
-        
-		Set<DogComparableByName> dogSet2 = new TreeSet<>();
 
-        dogSet2.add(new DogComparableByName("German Shepherd", "Laika", 2));
-        dogSet2.add(new DogComparableByName("Akita", "Hachi", 10));
-        dogSet2.add(new DogComparableByName("German Shepherd", "Togoe", 6));
-
-        for (DogComparableByName dog : dogSet2) {
+        dogList.sort( (d1, d2) -> d1.getName().compareTo(d2.getName()) );
+        for (Dog dog : dogList) {
             System.out.println(dog);
         }
+
         System.out.println();
 
-        Set<DogComparableByAge> dogSet3 = new TreeSet<>();
-
-        dogSet3.add(new DogComparableByAge("German Shepherd", "Laika", 2));
-        dogSet3.add(new DogComparableByAge("Akita", "Hachi", 10));
-        dogSet3.add(new DogComparableByAge("German Shepherd", "Togoe", 6));
-
-        for (DogComparableByAge dog : dogSet3) {
+        dogList.sort( (d1, d2) -> d1.getAge().compareTo(d2.getAge()) );
+        for (Dog dog : dogList) {
             System.out.println(dog);
         }
 		System.out.println();
