@@ -12,6 +12,7 @@ public class Main {
 	}
 	
 	private static void tryCatchFinallyExample() {
+		System.out.println("*******TRY CATCH FINALLY SECTION*******");
 		try {
 			System.out.println(23 / 0);
 		} catch (Exception e) {
@@ -50,18 +51,22 @@ public class Main {
 				System.err.println("There was a problem closing the file");
 			}
 		}
+		System.out.println();
 	}
 	
 	private static void tryWithResourcesExample() {
+		System.out.println("*******TRY WITH RESOURCES SECTION*******");
 		System.out.println("Opening the File...");
 		try (InputStream in = new FileInputStream("src/com/java8/c11/exceptions/existingfile.txt")) {
 			System.out.println("File opened");
 		} catch (IOException ioe) {
 			System.err.println("There was a problem opening the file");
 		} 
+		System.out.println();
 	}
 	
 	private static void propagatingExceptionExample() {
+		System.out.println("*******PROPAGATING EXCEPTION SECTION*******");
 		try {
 			methodWithExceptionPropagation();
 		} catch (NullPointerException ne) {
@@ -73,6 +78,7 @@ public class Main {
 		} catch (NullPointerException ne) {
 			System.err.println("There was a Null Pointer Exception");
 		}
+		System.out.println();
 	}
 	
 	private static void methodWithExceptionPropagation() throws NullPointerException {
