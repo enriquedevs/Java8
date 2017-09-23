@@ -28,12 +28,12 @@ public class Ex2 {
 		exercise3();
 		System.out.println("Running exercise 4 solution...");
 		exercise4();
-//		System.out.println("Running exercise 5 solution...");
-//		exercise5();
-//		System.out.println("Running exercise 6 solution...");
-//		exercise6();
-//		System.out.println("Running exercise 7 solution...");
-//		exercise7();
+		System.out.println("Running exercise 5 solution...");
+		exercise5();
+		System.out.println("Running exercise 6 solution...");
+		exercise6();
+		System.out.println("Running exercise 7 solution...");
+		exercise7();
 	}
 
 	/**
@@ -99,61 +99,61 @@ public class Ex2 {
 		}
 	}
 
-//	/**
-//	 * Using the BufferedReader to access the file, create a list of words with no
-//	 * duplicates contained in the file. Print the words.
-//	 *
-//	 * HINT: A regular expression, WORD_REGEXP, is already defined for your use.
-//	 */
-//	private static void exercise5() throws IOException {
-//		try (BufferedReader reader = 
-//				Files.newBufferedReader(Paths.get("src/com/java8/c8c10/lambda/text.txt"))) {
-//
-//			List<String> uniqueWords = reader.lines()
-//					.flatMap(line -> Stream.of(line.split(WORD_REGEXP)))
-//					.distinct()
-//					.collect(Collectors.toList());
-//
-//			uniqueWords.stream()
-//			.forEach(System.out::println);
-//		}
-//	}
-//
-//	/**
-//	 * Using the BufferedReader to access the file create a list of words from the
-//	 * file, converted to lower-case and with duplicates removed, which is sorted
-//	 * by natural order. Print the contents of the list.
-//	 */
-//	private static void exercise6() throws IOException {
-//		try (BufferedReader reader = 
-//				Files.newBufferedReader(Paths.get("src/com/java8/c8c10/lambda/text.txt"))) {
-//
-//			List<String> words = reader.lines()
-//					.flatMap(line -> Stream.of(line.split(WORD_REGEXP)))
-//					.map(String::toLowerCase)
-//					.distinct()
-//					.sorted()
-//					.collect(Collectors.toList());
-//
-//			words.stream().forEach(System.out::println);
-//		}
-//	}
-//
-//	/**
-//	 * Modify exercise6 so that the words are sorted by length
-//	 */
-//	private static void exercise7() throws IOException {
-//		try (BufferedReader reader = 
-//				Files.newBufferedReader(Paths.get("src/com/java8/c8c10/lambda/text.txt"))) {
-//
-//			List<String> words = reader.lines()
-//					.flatMap(line -> Stream.of(line.split(WORD_REGEXP)))
-//					.map(String::toLowerCase)
-//					.distinct()
-//					.sorted((a, b) -> a.length() - b.length())
-//					.collect(Collectors.toList());
-//
-//			words.stream().forEach(System.out::println);
-//		}
-//	}
+	/**
+	 * Using the BufferedReader to access the file, create a list of words with no
+	 * duplicates contained in the file. Print the words.
+	 *
+	 * HINT: A regular expression, WORD_REGEXP, is already defined for your use.
+	 */
+	private static void exercise5() throws IOException {
+		try (BufferedReader reader = 
+				Files.newBufferedReader(Paths.get("src/com/java8/c8c10/lambda/text.txt"))) {
+
+			List<Serializable> uniqueWords = reader.lines()
+					.flatMap(line -> Stream.of(line.split(WORD_REGEXP)))
+					.distinct()
+					.collect(Collectors.toList());
+
+			uniqueWords.stream()
+			.forEach(System.out::println);
+		}
+	}
+
+	/**
+	 * Using the BufferedReader to access the file create a list of words from the
+	 * file, converted to lower-case and with duplicates removed, which is sorted
+	 * by natural order. Print the contents of the list.
+	 */
+	private static void exercise6() throws IOException {
+		try (BufferedReader reader = 
+				Files.newBufferedReader(Paths.get("src/com/java8/c8c10/lambda/text.txt"))) {
+
+			List<String> words = reader.lines()
+					.flatMap(line -> Stream.of(line.split(WORD_REGEXP)))
+					.map(s -> ((String)s).toLowerCase())
+					.distinct()
+					.sorted()
+					.collect(Collectors.toList());
+
+			words.stream().forEach(System.out::println);
+		}
+	}
+
+	/**
+	 * Modify exercise6 so that the words are sorted by length
+	 */
+	private static void exercise7() throws IOException {
+		try (BufferedReader reader = 
+				Files.newBufferedReader(Paths.get("src/com/java8/c8c10/lambda/text.txt"))) {
+
+			List<String> words = reader.lines()
+					.flatMap(line -> Stream.of(line.split(WORD_REGEXP)))
+					.map(s -> ((String)s).toLowerCase())
+					.distinct()
+					.sorted((a, b) -> a.length() - b.length())
+					.collect(Collectors.toList());
+
+			words.stream().forEach(System.out::println);
+		}
+	}
 }
