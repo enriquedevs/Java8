@@ -87,6 +87,7 @@ public class Main {
         deque.add("A");
         deque.addFirst("B");
         deque.addLast("C");
+        deque.add("D");
         
         System.out.println(deque);
         

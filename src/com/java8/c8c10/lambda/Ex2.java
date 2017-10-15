@@ -114,8 +114,7 @@ public class Ex2 {
 					.distinct()
 					.collect(Collectors.toList());
 
-			uniqueWords.stream()
-			.forEach(System.out::println);
+			uniqueWords.stream().forEach(System.out::println);
 		}
 	}
 

@@ -55,7 +55,7 @@ public class Ex1 {
 		List<String> list = new ArrayList<>(Arrays.asList(
 				"alpha", "bravo", "charlie", "delta", "echo", "foxtrot"));
 
-		list.removeIf(s -> (s.length() & 1) == 1);
+		list.removeIf(s -> (s.length() % 2) == 1);
 		list.forEach(System.out::println);
 	}
 
