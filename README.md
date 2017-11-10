@@ -17,3 +17,15 @@
 * In Import Window select the directory General and select "Projects from Folder or Archive"
 * In the next Window click on "Directory..." button and browse and select the "Java8" directory and click "Finish" button
 * It's done, Happy Learning!
+
+To use this project as dependency, just use it in the pom.xml as:
+
+```
+<dependency>
+	<groupId>com.staples.cp</groupId>
+	<artifactId>domain-xref</artifactId>
+	<version>1.0.0-SNAPSHOT</version>
+</dependency>
+```
+
+The version will change accordingly the selected version of the dependency.
